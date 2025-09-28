@@ -22,7 +22,7 @@
 
 .image-row figure {
     flex: 1;
-    max-width: 250px;
+    max-width: 100px;
 }
 
 .image-row img {
