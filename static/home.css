@@ -19,3 +19,13 @@
     white-space: nowrap;
     width: 1px;
 }
+
+.image-row figure {
+    flex: 1;
+    max-width: 250px;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+}
