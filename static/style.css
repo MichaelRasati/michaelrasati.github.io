@@ -1,0 +1,67 @@
+.page-title {
+    position: absolute;   
+    top: 5px;            
+    left: 5px;           
+    font-weight: bold;    
+    font-size: 30px;
+}
+.padding {
+    padding: 10px;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.image-row figure {
+    flex: 1;
+    max-width: 100px;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 65ch;        
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* https://jsdevspace.substack.com/p/understanding-the-root-selector-and */
+
+:root {
+    --bg: #E8F8F9;
+    --text: #091948;
+    --accent: #15C1E0;
+    --accent-2: #28E092;
+    --muted: #AE10E0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: var(--bg); color: var(--text);
+}
+
+a { 
+    color: var(--accent); 
+}
+
+a:hover { 
+    color: var(--accent-2); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    line-height: 1.3;
+}
