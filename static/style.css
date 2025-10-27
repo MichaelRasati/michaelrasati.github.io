@@ -20,15 +20,24 @@
     width: 1px;
 }
 
+.image-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .image-row figure {
-    flex: 1;
-    max-width: 100px;
+    flex: 1 1 260px;
+    margin: 0;
+    max-width: none;
 }
 
 .image-row img {
-    max-width: 100%;
+    display: block;
+    width: 100%;
     height: auto;
 }
+
 
 .wrapper {
     max-width: 65ch;        
