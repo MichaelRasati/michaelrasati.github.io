@@ -20,13 +20,14 @@
         
         <header style="text-align: center;">
             <h1>5 – Tables & Forms</h1>
-            <nav aria-label="Article navigation">
-                <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#life">Life</a></li>
-                <li><a href="#veneration">Veneration</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                </ul>
+            <nav aria-labelledby="Article-navigation">
+                <h2 id="Article-navigation" class="sr-only">Article Navigaton</h2>
+                    <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#life">Life</a></li>
+                    <li><a href="#veneration">Veneration</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    </ul>
             </nav>
         </header>
 
@@ -90,8 +91,37 @@
             </article>
         </main>
 
-    <footer>
+    <footer id="contact" aria-labelledby="contact-title" style="text-align: center;">      
+
+        <h2 id="contact-title">Contact Us</h2>
+        <form action="/my-handling-form-page" method="post">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+            </p>
+            <p>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+            </p>
+            <p>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </p>
+
+            <!-- I really hope you fall for this... -->
+            <p class="button">
+                <a class="btn"
+                    href="https://youtu.be/oHg5SJYRHA0?si=0u-feAQLE8vUyGJ-"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Send your message
+                </a>
+            </p>
+
+
+        </form>
         <p>Content from <a href="https://en.wikipedia.org/wiki/Pope_Pontian">Wikipedia</a>, CC BY-SA.</p>
+
     </footer>
     </body>
 
