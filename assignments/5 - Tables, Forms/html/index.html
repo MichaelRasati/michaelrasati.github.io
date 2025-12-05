@@ -92,38 +92,36 @@
             </article>
         </main>
 
-    <footer id="contact" aria-labelledby="contact-title" style="text-align: center;">      
+    <footer id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Have questions or accessibility feedback about this site? Let me know.</p>
 
-        <h2 id="contact-title">Contact Us</h2>
-        <form action="/my-handling-form-page" method="post">
-            <span class="material-symbols-outlined">
-                quick_reference
-            </span>
-            <p>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name" />
-            </p>
-            <p>
-                <label for="mail">Email:</label>
-                <input type="email" id="mail" name="user_email" />
-            </p>
-            <p>
-                <label for="msg">Message:</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </p>
+    <form class="contact-form" action="/my-handling-form-page" method="post">
+        <span class="material-symbols-outlined contact-icon" aria-hidden="true">
+            quick_reference
+        </span>
 
-            <!-- I really hope you fall for this... -->
-            <p class="button">
-                <a class="btn"
-                    href="https://youtu.be/oHg5SJYRHA0?si=0u-feAQLE8vUyGJ-"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Send your message
-                </a>
-            </p>
+        <div class="form-row">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="user_name" autocomplete="name">
+        </div>
 
+        <div class="form-row">
+            <label for="contact-mail">Email</label>
+            <input type="email" id="contact-mail" name="user_email" autocomplete="email">
+        </div>
 
-        </form>
+        <div class="form-row">
+            <label for="contact-msg">Message</label>
+            <textarea id="contact-msg" name="user_message" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="button button-how">
+            Send your message
+        </button>
+    </form>
+</footer>
+
         <p>Content from <a href="https://en.wikipedia.org/wiki/Pope_Pontian">Wikipedia</a>, CC BY-SA.</p>
 
     </footer>

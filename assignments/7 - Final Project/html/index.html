@@ -1,75 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Study Group Scheduler</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <link rel="stylesheet" href="../static/style.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-
     <div class="container">
-        <header>
-            <h1>Study Group Scheduler</h1>
-            <p>Accessible scheduling system for work and study groups.</p>
-        </header>
-
-        <nav aria-label="Primary">
-            <h2 class="sr-only">Main navigation</h2>
-            <ul>
-                <li>
-                    <a href="../../../index.html">
-                        CSCI 3150 Home
-                        <span class="material-symbols-outlined" aria-hidden="true">home</span>
-                    </a>
-                </li>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#groups">Groups</a></li>
-                <li><a href="#signup">Sign Up</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <main id="main" tabindex="-1">
-            <section id="overview" aria-labelledby="overview-title">
-                <h2 id="overview-title">Overview</h2>
-                <p>Place information about the purpose of this page along with accessibility feature list.</p>
-            </section>
-
-            <section id="schedule" aria-labelledby="schedule-title">
-                <h2 id="schedule-title">Schedule</h2>
-                <p>Table with all the possible groups and when they meet</p>
-            </section>
-
-            <section id="groups" aria-labelledby="groups-title">
-                <h2 id="groups-title">Groups</h2>
-                <p>Will have basic information on these groups that you can sign up for.</p>
-            </section>
-
-            <section id="signup" aria-labelledby="signup-title">
-                <h2 id="signup-title">Sign Up</h2>
-                <p>This will be a form, which will have a drop down for groups in addition to other fillable fields.</p>
-            </section>
-        </main>
-
-        <aside id="aside1">
-            <h2>Side Panel One</h2>
-            <p>Potentially place like an accessibility workshop ad here?</p>
-        </aside>
-
-        <aside id="aside2">
-            <h2>Side Panel Two</h2>
-            <p>Still unsure if this is fully needed. Need to find something here. Maybe more resources, like a math accessability panel or something.</p>
-        </aside>
-
-        <footer id="contact">
-            <h2>Contact</h2>
-            <p>Contact information and accessibility statement inviting feedback about the site.</p>
-        </footer>
+      <header>
+        <a class="home-button" href="/michaelrasati.github.io/index.html" aria-labelledby="home">
+          <h2 id="home" class="sr-only">CSCI 3150 Home</h2>
+          <span class="material-symbols-outlined" aria-hidden="true">home</span>
+        </a>
+        <h1>Mike's Universal Design Guide</h1>
+        <p>A mini site to help designers and developers understand and apply universal design on the web.</p>
+      </header>
+      <main id="main" tabindex="-1" aria-labelledby="what-card">
+        <h2 id="what-card" class="sr-only">What is Universal Design</h2>
+        <img src="../static/images/WhatHome.png" alt="Woman reading something on her phone in a dark room." />
+        <a href="what.html" class="button button-what">Discover What</a>
+        <div class="panel-text panel-text-what">
+          <strong>
+            <p>Enabling users by scaling greater potential for website control.</p>
+          </strong>
+        </div>
+      </main>
+      <aside id="aside1" aria-labelledby="why-card">
+        <h2 id="why-card" class="sr-only">Why Universal Design Matters</h2>
+        <img
+          src="../static/images/WhyHome.png"
+          alt="Pile of laptops, tablets, and phones stacked in a glowing mound in a dark room."
+        />
+        <a href="why.html" class="button button-why">Discover Why</a>
+        <div class="panel-text panel-text-why">
+          <strong>
+            <p>Website access and utilization varies from person to person. Why not maximize who can use a site?</p>
+          </strong>
+        </div>
+      </aside>
+      <aside id="aside2" aria-labelledby="how-card">
+        <h2 id="how-card" class="sr-only">How to Design Universally</h2>
+        <img src="../static/images/HowHome.png" alt="Woman writing code on a laptop with multiple screens." />
+        <a href="how.html" class="button button-how">Discover How</a>
+        <div class="panel-text panel-text-how">
+          <strong>
+            <p>Developing websites using accessibility controls, screen-readers, tabbing, and much more.</p>
+          </strong>
+        </div>
+      </aside>
+      <footer id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Us</h2>
+        <p>Have questions or accessibility feedback about this site? Let me know.</p>
+        <form class="contact-form" action="/my-handling-form-page" method="post">
+          <fieldset>
+            <legend>Send accessibility feedback</legend>
+            <span class="material-symbols-outlined contact-icon" aria-hidden="true"> quick_reference </span>
+            <div class="form-row">
+              <label for="contact-name"> Name </label>
+              <input type="text" id="contact-name" name="user_name" autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <label for="contact-mail">
+                Email
+                <span class="sr-only">(required)</span>
+              </label>
+              <input type="email" id="contact-mail" name="user_email" autocomplete="email" required />
+            </div>
+            <div class="form-row">
+              <label for="contact-msg">
+                Message
+                <span class="sr-only">(required)</span>
+              </label>
+              <textarea id="contact-msg" name="user_message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="button button-how">Send your message</button>
+          </fieldset>
+        </form>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

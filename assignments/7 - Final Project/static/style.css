@@ -11,11 +11,11 @@
 }
 
 :root {
-    --bg: #E8F8F9;
+    --bg: #e8f8f9;
     --text: #091948;
-    --accent: #15C1E0;
-    --accent-2: #28E092;
-    --muted: #AE10E0;
+    --accent: #15c1e0;
+    --accent-2: #28e092;
+    --muted: #ae10e0;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     background: var(--bg);
@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     line-height: 1.3;
     margin-bottom: 0.5em;
 }
@@ -60,40 +60,78 @@ a:visited {
     color: #1a0dab;
 }
 
-ul {
-    list-style-type: none;
+main ul,
+aside ul {
+    list-style: disc outside;
+    padding-left: 2rem;
+    margin-left: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 10px;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "heady"
-        "navvy"
-        "mainy"
         "aside1"
+        "mainy"
         "aside2"
         "footy";
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 header,
-nav,
-main,
-aside,
 footer {
     padding: 1rem;
-    border: 1px solid #000;
     background: #ffffff;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+main,
+aside {
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 header {
     grid-area: heady;
+    position: relative;
     text-align: center;
+}
+
+.home-button {
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 999px;
+    background: #f2f4f8;
+    color: inherit;
+    text-decoration: none;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+    background: #dde4f0;
+    outline: 2px solid #003366;
+    outline-offset: 2px;
+}
+
+.material-symbols-outlined {
+    font-size: 2.5rem;
+    line-height: 1;
 }
 
 nav {
@@ -102,19 +140,98 @@ nav {
 
 main {
     grid-area: mainy;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #aside1 {
     grid-area: aside1;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+#aside1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #aside2 {
     grid-area: aside2;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+#aside2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 footer {
     grid-area: footy;
     text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 480px;
+    margin: 0 auto 0.5rem;
+    text-align: left;
+}
+
+.contact-icon {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    font-size: 2.4rem;
+}
+
+.contact-form .form-row {
+    margin-bottom: 0.75rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid #555;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+}
+
+.contact-form legend {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
 }
 
 nav ul {
@@ -133,7 +250,6 @@ nav ul li a {
     width: 100%;
     text-align: center;
 }
-
 
 .sr-only {
     border: 0;
@@ -169,6 +285,24 @@ nav ul li a {
     z-index: 1000;
 }
 
+@media screen and (max-width: 640px) {
+    header {
+        padding-top: 3.5rem;
+    }
+
+    .home-button {
+        width: 2.2rem;
+        height: 2.2rem;
+        top: 0.75rem;
+        left: 0.75rem;
+        transform: none;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1.6rem;
+    }
+}
+
 @media screen and (min-width: 641px) and (max-width: 900px) {
     body {
         font-size: 1rem;
@@ -178,15 +312,26 @@ nav ul li a {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "heady heady"
-            "navvy navvy"
-            "mainy mainy"
-            "aside1 aside2"
+            "aside1 aside1"
+            "mainy aside2"
             "footy footy";
     }
 
     nav ul {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .home-button {
+        width: 2.2rem;
+        height: 2.2rem;
+        top: 0.75rem;
+        left: 0.75rem;
+        transform: none;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1.6rem;
     }
 }
 
@@ -196,10 +341,9 @@ nav ul li a {
     }
 
     .container {
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             "heady heady heady"
-            "navvy navvy navvy"
             "aside1 mainy aside2"
             "footy footy footy";
     }
@@ -208,10 +352,168 @@ nav ul li a {
         flex-direction: row;
         justify-content: space-around;
     }
+
+    .home-button {
+        width: 3rem;
+        height: 3rem;
+        top: 1.5rem;
+        left: 1.5rem;
+        transform: none;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1.6rem;
+    }
 }
 
-.material-symbols-outlined {
+.button {
+    border: none;
+    padding: 0.9rem 2.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 1.1rem;
-    line-height: 1;
-    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Why – wheelchair image, bottom center */
+#aside1 .button-why {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background-color: #facc15;
+    color: #111827;
+    z-index: 2;
+}
+
+#aside1 .button-why:hover,
+#aside1 .button-why:focus-visible {
+    background-color: #eab308;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* What – phone image in main, top center */
+main .button-what {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background-color: #0ea5e9;
+    color: #0f172a;
+    z-index: 2;
+}
+
+main .button-what:hover,
+main .button-what:focus-visible {
+    background-color: #0369a1;
+    color: #f9fafb;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* How – coding image, bottom center */
+#aside2 .button-how {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background-color: #4f46e5;
+    color: #f9fafb;
+    z-index: 2;
+}
+
+#aside2 .button-how:hover,
+#aside2 .button-how:focus-visible {
+    background-color: #3730a3;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.panel-text {
+    position: absolute;
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+/* Why – box at top, button at bottom */
+.panel-text-why {
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    background-color: rgba(250, 204, 21, 0.75);
+    color: #111827;
+}
+
+/* What – box at bottom, button at top */
+.panel-text-what {
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    background-color: rgba(14, 165, 233, 0.75);
+    color: #0f172a;
+}
+
+/* How – box at top, button at bottom */
+.panel-text-how {
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    background-color: rgba(79, 70, 229, 0.75);
+    color: #e5e7eb;
+}
+
+main img,
+#aside1 img,
+#aside2 img {
+    border-radius: 0.75rem;
+}
+.contact-form .button {
+    display: block;
+    font-size: 1rem;
+    padding: 0.6rem 1.4rem;
+    margin: 0.75rem auto 0;
+}
+
+.panel-inner {
+    padding: 0.75rem 1.25rem;
+}
+
+body.theme-why {
+    background-color: #facc15;
+}
+
+body.theme-what {
+    background-color: #0ea5e9;
+}
+
+body.theme-how {
+    background-color: #4f46e5;
+}
+
+.infographic {
+    margin-top: 0.75rem;
+}
+
+.infographic img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+.infographic figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
 }

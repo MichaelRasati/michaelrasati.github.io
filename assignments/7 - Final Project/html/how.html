@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>How to Practice Universal Design – Mike's Universal Design Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body class="theme-how">
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+    <div class="container">
+      <header>
+        <a class="home-button" href="index.html" aria-labelledby="back-home">
+          <h2 id="back-home" class="sr-only">Back to Home Page</h2>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        </a>
+        <h1>How to Practice Universal Design</h1>
+        <p>
+          Universal design happens through small choices. This page demonstrates useful ways to make websites work for
+          more people.
+        </p>
+      </header>
+
+      <main id="main" tabindex="-1" aria-labelledby="how-main-heading">
+        <div class="panel-inner">
+          <h2 id="how-main-heading">Start with Solid Structure</h2>
+
+          <p>
+            Begin by writing clean, semantic HTML. Use proper headings, lists, and landmarks so both people and
+            assistive technologies can understand the page.
+          </p>
+
+          <ul>
+            <li>Use a single <code>&lt;h1&gt;</code> for the page topic, then nested headings in order</li>
+            <li>
+              Wrap the main content in <code>&lt;main&gt;</code> and supporting content in <code>&lt;aside&gt;</code>
+            </li>
+            <li>Use lists, tables, and forms only when they match the meaning of the content</li>
+            <li>Add a skip link so keyboard users can jump straight to the main section</li>
+          </ul>
+
+          <figure class="infographic">
+            <img
+              src="../static/images/Section-3_Illustration-8.png"
+              alt="Illustration comparing inconsistent web page layouts marked with a red X to consistent layouts marked with a green check, with the text ‘Use consistent structure and layout’ explaining that repeated navigation, headings and logos make sites easier to navigate."
+            />
+            <figcaption>
+              Source:
+              <a
+                href="https://universaldesign.ie/communications-digital/customer-communications-toolkit-a-universal-design-approach/customer-communications-toolkit-a-universal-design-approach-navigation/digital/designing-and-developing-usable-websites"
+              >
+                Customer Communications Toolkit – Designing and developing usable websites
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+      </main>
+
+      <aside id="aside1" aria-labelledby="how-aside1-heading">
+        <div class="panel-inner">
+          <h2 id="how-aside1-heading">Design for Different Ways of Interacting</h2>
+          <p>
+            Everyone uses the web in unique ways. Some rely on keyboards, some screen readers, and many browse on small
+            touch screens.
+          </p>
+          <ul>
+            <li>Make sure every interactive element can be reached and used with a keyboard alone</li>
+            <li>Use visible focus styles so it is clear where the keyboard is on the page</li>
+            <li>Give images meaningful alternative text, or empty alt text when they are purely decorative</li>
+            <li>Use clear labels, legends, and instructions for forms, instead of only placeholder text</li>
+            <li>Provide enough color contrast and avoid using color as the only way to show meaning</li>
+          </ul>
+          <figure class="infographic">
+            <img
+              src="../static/images/mediaCode.PNG"
+              alt="Screenshot of a CSS media query for screens under 640 pixels that adjusts header padding and shrinks the home button and icon for mobile devices."
+            />
+          </figure>
+        </div>
+      </aside>
+
+      <aside id="aside2" aria-labelledby="how-aside2-heading">
+        <div class="panel-inner">
+          <h2 id="how-aside2-heading">A Quick Checklist for this Site</h2>
+          <p>This project uses several universal design techniques you can reuse in other work.</p>
+          <ul>
+            <li>Mobile-first, responsive layout using CSS grid so content reflows on different screen sizes</li>
+            <li>Semantic landmarks: header, main, asides, and footer to organize the page</li>
+            <li>Skip link to jump past repeated content</li>
+            <li>Descriptive alt text and captions for meaningful images and infographics</li>
+            <li>Accessible contact form with labels, a fieldset, and a legend in the home page footer</li>
+            <li>Consistent button styles and color themes that keep text readable against the background</li>
+          </ul>
+          <figure class="infographic">
+            <img
+              src="../static/images/udlg3-graphicorganizer-digital-numbers-a11y-1.png"
+              alt="CAST Universal Design for Learning Guidelines chart with three columns labeled Design Multiple Means of Engagement, Representation, and Action and Expression, each listing options for access, support, and executive function."
+            />
+            <figcaption>
+              Source:
+              <a href="https://udlguidelines.cast.org/more/downloads/#choose-your-udl-guidelines-v-30-representation">
+                CAST Universal Design for Learning Guidelines, version 3.0 </a
+              >.
+            </figcaption>
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
